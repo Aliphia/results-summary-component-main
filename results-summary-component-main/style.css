@@ -1,0 +1,127 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+*{
+    margin: 0;
+}
+  body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
+  a,input, button, textarea, select {
+    color: inherit;
+  }
+  ul,li,a{
+    text-decoration: none;
+}
+.main{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: minmax(280px,375px);
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+.first-container{
+ background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ flex: 1 1 100%;
+ border-radius: 1rem;
+ padding: 2rem;
+ text-align: center;
+}
+
+.result__number{
+    background-image: linear-gradient(hsl(241, 81%, 54%),
+    hsl(252, 100%, 67%));
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    line-height: 0.7;
+    padding: 37px;
+    font-size: 60px;
+    margin: 20px;
+}
+.result__number span{
+font-size: 18px;
+opacity: 0.7;
+}
+
+.second-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr repeat(5, 1fr);
+    color: hsl(224, 30%, 27%);
+    padding: 10px;
+    gap: 10px;
+    opacity: 1;
+}
+.results{
+    padding-inline: 10px;
+    border-radius: 1rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.first-result{
+background-color: hsl(0, 100%, 95%);
+}
+.first-result p:nth-child(1){
+   color: hsl(0, 100%, 47%);
+}
+
+.second-result{
+background-color:hsl(39, 100%, 93%);
+}
+.second-result p:nth-child(1){
+    color: hsl(39, 100%, 46%);
+}
+.third-result{
+background-color: hsl(166, 100%, 90%);
+}
+.third-result p:nth-child(1){
+    color: hsl(166, 100%, 30%);
+}
+
+.fourth-result{
+background-color: hsl(234, 85%, 95%);
+}
+.fourth-result p:nth-child(1){
+color: hsl(234, 85%, 35%);
+}
+
+.btn{
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    border-radius: 2rem;
+    text-align: center;
+    align-self: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+span{
+    opacity: 0.7;
+}
+.svg{
+transform: translateY(3px);
+}
+
+@media (min-width:640px) {
+    .main{
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr;
+margin-top: calc(50vh - 225px);
+margin-inline: auto;
+max-height: 450px;
+border-radius: 1rem;
+overflow: hidden;
+max-width: 700px;
+box-shadow: 0.5rem 1rem 3rem hsl(224, 30%, 27%, 0.2);
+    }
+}
